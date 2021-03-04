@@ -21,7 +21,7 @@ def topics(request):
 
 @login_required
 def topic(request,topic_id):
-    """显示单个主题及其所有的条目。"""
+    """显示单个主题及其所有的条目。1"""
     topic = Topic.objects.get(id=topic_id)
     # 确认请求的主题属于当前用户
     if topic.owner != request.user:
